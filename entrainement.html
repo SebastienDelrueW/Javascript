@@ -14,7 +14,6 @@
 
     <!-- CONTENU HTML -->
        
-       
        <script>
         // commentaires pour la ligne
 
@@ -26,6 +25,13 @@
                     -- 1 --         COMMENTAIRES, SYNTAXE
                     -- 2 --         AFFICHAGE
                     -- 3 --         VARIABLES
+                    -- 4 --         TYPES DE DONNEES
+                    -- 5 --         CONSTANTES
+                    -- 6 --         CONCATENATION
+
+
+
+
         */
 
         /*
@@ -94,11 +100,118 @@
         var prenom = 'Sylvie', nom = 'Dupont', genre ='Feminin';
 
         prenom = 'Martine';
+        console.log('Prénom : ' + prenom);
         prenom = 'Robert';
 
-        console.log(prenom);
+        console.log('Prénom : '+prenom);
+        // console.log(prenom);
         console.log(nom);
-       
+        document.write('<br>'+prenom+'<br>');
+
+        var fruits ='Pomme';
+        console.log(fruits);
+
+        // contrairement au = d"affectation qui remplace la valeur de la variable, j'utilise ici +=
+        // qi va ajouter à la valeur de la variable
+        fruits += 'Fraise '; // prend en compte l'espace
+        console.log(fruits);
+        fruits += 'Manque';
+        console.log(fruits);
+
+        var note_eval = 12;
+        console.log(note_eval);
+        note_eval += 2
+        console.log(note_eval);
+        // je peux garder une variable sans définir son contenu, mais si je fais appel à elle, elle sera undefined 
+        var quelqueChose;
+        console.log(quelqueChose);
+        // si je fais appel à une variable qui n'a pas été déclarée (autreChose), j'aurai un message d'erreu (not defined), c'est à éviter
+        // console.log(autreChose); 
+
+        // je peux déclarer une variable avec le mot clef 'let' variable let 
+        let maNouvelleVariable;
+        console.log(maNouvelleVariable); 
+
+        // je peux déclarer de manière globale (sans mot clef ni var, ni let) mais je dois lui conférer une valeur: variable globale
+        maTroisiemeVariable ='test';
+        console.log(maTroisiemeVariable); 
+
+        /*
+        -----------------------------------------------------
+        -------------------4 TYPES DE DONNEES ---------------
+        -----------------------------------------------------
+        */
+        document.write('<h2> 4 - TYPES DE DONNEES</h2>');
+
+        // les trois rincipaux types de donnéees (appelés primitifs) sont les string (chaine de caractères) / number (données numériques) / booléan (données booléennes vrai ou faux)
+
+        // les string:
+        var monTexte="Voici une phrase écrite dans un double quote";
+        // l'antislash permet d'échapper un caractère dans la string
+        var monTexte2='Voici une phrase écrite dans un simple quote aujourd\'hui <br>';
+        console.log(monTexte2); 
+        document.write(monTexte2);
+        var monTexte3 = '55';
+
+        //   type Number
+        var chiffre = 5.5; // affectation se fait sans quote
+        console.log(chiffre); 
+        var négatif = -10; // tous les types d'écritures numériques sont possibles
+        var decimal = 5.5;
+
+        // type booléen : il ne prend que deux valeurs TRUE ou FALSE
+        var choix = true;
+        console.log(choix); 
+
+        // typeof permet de verifier le type d'une variable
+        document.write(typeof(monTexte)+'<br>');
+        document.write(typeof(chiffre)+'<br>');
+        document.write(typeof(choix)+'<br>');
+
+        var monChiffre = '50';
+        var monChiffre2 = '20';
+        console.log(monChiffre+monChiffre2); 
+        console.log(typeof(monChiffre)); 
+
+        var ageUtilisateur = prompt('Quel est votre age ?')
+        console.log(typeof(ageUtilisateur));
+
+        /*
+        -----------------------------------------------------
+        -------------------5 CONSTANTES ---------------
+        -----------------------------------------------------
+        */
+        document.write('<h2> 5 - CONSTANTES</h2>');
+
+        // les constantes ne sont jamais destinées à varier, elles sont déclarées par le mot clé const et par convention nous les nommerons tout en majuscule, afin de les différencier des variables 
+
+        const BOUGE_PAS = 'ma constante impossible à modifier';
+        document.write(BOUGE_PAS+'<br>');
+        // const BOUGE_PAS = 'nouveau contenu' ; induira des messages d'erreur que d'essayer de redefinir une constante
+
+
+        /*
+            -----------------------------------------------------
+            -------------------6 CONCATENATION ---------------
+            -----------------------------------------------------
+            */
+            document.write('<h2> 6 - CONCATENATION</h2>');
+
+
+            // nous concatenons les string avec le symbole +
+
+            var prenom = 'Bruce', nom='Wayne';
+            // ecrire dansle document "Bruce Wayne"
+            document.write(prenom +' '+ nom + '<br>'); //création d'un espace entre Bruce et Wayne
+            document.write('<strong>' + prenom + '</strong> ' +  nom  +'<br>');
+
+            // realiser un prompt demandans son age à l'utilisateur, récupérer cette donnée et l'utiliser pour afficher : vous avez XX ans !
+
+            var definitionAge = prompt('Quel est votre age ?');
+            document.write('vous avez ' + definitionAge + ' ans.');
+            
+            
+
 
         </script>
 </body>
