@@ -9,7 +9,7 @@
     </style>
     
 </head>
-<body>
+    <body>
 
     <!-- CONTENU HTML -->
        
@@ -89,9 +89,10 @@
         // Affectation de la valeur via un prompt rempli par l'utilisateur
         // exemple de déclaration et affectation dans la même instruction
         // var sonAge =20;
+        var sonAge;
+        sonAge = prompt('Quel est votre age ?');
         var sonAge = prompt('Quel est votre age ?');
-        document.write(sonAge);
-
+        
         // possibilité de déclarer un ensemnble de variables
         var prenom = 'Sylvie', nom = 'Dupont', genre ='Feminin';
 
@@ -169,12 +170,12 @@
         console.log(monChiffre+monChiffre2); 
         console.log(typeof(monChiffre)); 
 
-        var ageUtilisateur = prompt('Quel est votre age ?')
+        var ageUtilisateur = prompt('Quel est votre age ?');
         console.log(typeof(ageUtilisateur));
 
         /*
         -----------------------------------------------------
-        -------------------5 CONSTANTES ---------------
+        -------------------5 CONSTANTES ---------------------
         -----------------------------------------------------
         */
         document.write('<h2> 5 - CONSTANTES</h2>');
@@ -186,25 +187,161 @@
         // const BOUGE_PAS = 'nouveau contenu' ; induira des messages d'erreur que d'essayer de redefinir une constante
 
         /*
-            -----------------------------------------------------
-            -------------------6 CONCATENATION ---------------
-            -----------------------------------------------------
-            */
-            document.write('<h2> 6 - CONCATENATION</h2>');
+        --------------------------------------------------
+        -------------------6 CONCATENATION ---------------
+        --------------------------------------------------
+        */
+        document.write('<h2> 6 - CONCATENATION</h2>');
 
 
-            // nous concatenons les string avec le symbole +
+        // nous concatenons les string avec le symbole +
 
-            var prenom = 'Bruce', nom='Wayne';
-            // ecrire dansle document "Bruce Wayne"
-            document.write(prenom +' '+ nom + '<br>'); //création d'un espace entre Bruce et Wayne
-            document.write('<strong>' + prenom + '</strong> ' +  nom  +'<br>');
+        var prenom = 'Bruce', nom='Wayne';
+        // ecrire dansle document "Bruce Wayne"
+        document.write(prenom +' '+ nom + '<br>'); //création d'un espace entre Bruce et Wayne
+        document.write('<strong>' + prenom + '</strong> ' +  nom  +'<br>');
+        document.write('<span style="color: red">' + prenom + '</span> ' + nom + '<br>');
 
-            // realiser un prompt demandans son age à l'utilisateur, récupérer cette donnée et l'utiliser pour afficher : vous avez XX ans !
+        // realiser un prompt demandans son age à l'utilisateur, récupérer cette donnée et l'utiliser pour afficher : vous avez XX ans !
 
-            var definitionAge = prompt('Quel est votre age ?');
-            document.write('vous avez ' + definitionAge + ' ans.');
+        var definitionAge = prompt('Quel est votre age ?');
+        document.write('vous avez ' + definitionAge + ' ans.');
+
+        /*
+        --------------------------------------------------------------
+        -------------------7 OPERATEURS ARITHMETHIQUES ---------------
+        --------------------------------------------------------------
+        */
+        document.write('<h2> 7 -  OPERATEURS ARITHMETHIQUES</h2>');
+
+        // additions
+        var addition = 10 + 5;
+        document.write(addition +'<br>');// resultat 15
+
+        // soustraction
+        var soustraction = 16 - 4;
+         document.write(soustraction + '<br>');// resultat 12
+
+        //  multiplication
+        var multiplication = 5 * 4;
+        document.write(multiplication + '<br>');// resultat 20
+
+        // division
+        var division = 20 / 4;
+        document.write(division + '<br>');// resultat 5
+
+        // modulo 'j'ai dix billes pour trois personnes , il me reste une, le modulo exprime ce qui reste de l'opération)
+        var modulo = 20 % 3;
+        document.write(modulo + '<br>'); // resultat 1
+
+        var chiffre1 = 10, chiffre2 = 5;
+        var resultat = chiffre1 + chiffre2; // tester avec + - * / %
+         document.write(resultat + '<br>'); // resultat 15
+        var resultat = chiffre1 - chiffre2; // tester avec + - * / %
+        var resultat = chiffre1 * chiffre2; // tester avec + - * / %
+        var resultat = chiffre1 / chiffre2; // tester avec + - * / %
+        var resultat = chiffre1 % chiffre2; // tester avec + - * / %
+        document.write(resultat + '<br>'); // resultat 15
+
+        var chiffre3 = 20;
+        chiffre3 = chiffre3 + 10 ;
+        document.write(chiffre3 + '<br>');
+
+        chiffre3 += 5;// fonctionne avec tous les opérateurs -=, *=, /=, %=
+        document.write(chiffre3 + '<br>'); 
+
+        // recuperer dans un prompt la valeur souhaitée par l'utilisateur.
+        // envoyer une alerte indiquant le resultat au carré et au cube
+
+
+
+        var ageDelapersonne =  prompt('quel est ton age ?');
+
+        var carre = ageDelapersonne* ageDelapersonne;
+        var cube = ageDelapersonne* ageDelapersonne* ageDelapersonne;
+
+        ageDelapersonne =  prompt('quel est ton age ?');
+        document.write(ageDelapersonne*ageDelapersonne);
+
+
+        alert('le résultat au carre est ' + ageDelapersonne * ageDelapersonne +  ' au cube est ' + ageDelapersonne*ageDelapersonne*ageDelapersonne);
+
+        alert('pour ' + ageDelapersonne + '. Le carré est : ' + carre + ', le cube est :' + cube);
+
+        /*
+        -----------------------------------------------
+        -------------------8 CONDITIONS ---------------
+        -----------------------------------------------
+        */
+        document.write('<h2> 8 -  CONDITIONS</h2>');
+
+        var a = 10, b = 5, c = 2; 
+
+       
+        if(a > b){
+            document.write('A est supérieur à B <br>');    //le <br> c'est pour le retour à la ligne          
+        }
+
+        else{
+            document.write('A n\'est supérieur à B <br>'); //le <br> c'est pour le retour à la ligne
+        }
+
+        if(a == b){
+            document.write('A est égal à B <br>'); //le <br> c'est pour le retour à la ligne
+        }
+
+        else {
+            document.write('A est différent de B <br>'); //le <br> c'est pour le retour à la ligne
+        }
+
+        if(a === b) {
+            document.write('A est égal à B <br>'); //le <br> c'est pour le retour à la ligne
+        }
+
+        else {
+            document.write('A est différent de B <br>'); //le <br> c'est pour le retour à la ligne
+        }
+
+        // if et AND
+        if(a > b && b > c){
+            document.write('ok pour les deux conditions <br>');
+        }
+
+        else {
+            document.write('une condition au moins, n\'est pas remplie  <br>');
+        }
+
+        // if et OR
+        if (a > b || b > c) {
+             document.write('ok au moins une des conditions est valable <br>');
+        }
+
+        else {
+             document.write('aucune des conditions n\'est remplie <br>');
+        }
+
+        // if multiples (else if)
+
+        if(a < 5){
+             document.write('A est inférieur à 5 <br>');
+        }
+        else if(a == 5){
+            document.write('A est égal à 5 <br>');
+        }
+        else if(a > 5){
+            document.write('A est supérieur à 5 <br>');
+        }
+        else{
+            document.write('A n\'est pas un nombre <br>');
+        }
+
+        /*
+        -----------------------------------------------
+        -------------------9 OPERATEURS ---------------
+        -----------------------------------------------
+        */
+        document.write('<h2> 9 - OPERATEURS</h2>');
 
         </script>
-</body>
+    </body>
 </html>
