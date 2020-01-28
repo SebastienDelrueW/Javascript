@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>ENTRAINEMENT JS</title>
     <style>
-    
   
     </style>
     
@@ -193,7 +192,6 @@
         */
         document.write('<h2> 6 - CONCATENATION</h2>');
 
-
         // nous concatenons les string avec le symbole +
 
         var prenom = 'Bruce', nom='Wayne';
@@ -253,8 +251,6 @@
         // recuperer dans un prompt la valeur souhaitée par l'utilisateur.
         // envoyer une alerte indiquant le resultat au carré et au cube
 
-
-
         var ageDelapersonne =  prompt('quel est ton age ?');
 
         var carre = ageDelapersonne* ageDelapersonne;
@@ -262,7 +258,6 @@
 
         ageDelapersonne =  prompt('quel est ton age ?');
         document.write(ageDelapersonne*ageDelapersonne);
-
 
         alert('le résultat au carre est ' + ageDelapersonne * ageDelapersonne +  ' au cube est ' + ageDelapersonne*ageDelapersonne*ageDelapersonne);
 
@@ -279,10 +274,10 @@
 
        
         if(a > b){
-            document.write('A est supérieur à B <br>');    //le <br> c'est pour le retour à la ligne          
+            document.write('A est supérieur à B <br>'); //le <br> c'est pour le retour à la ligne          
         }
 
-        else{
+        else {
             document.write('A n\'est supérieur à B <br>'); //le <br> c'est pour le retour à la ligne
         }
 
@@ -325,22 +320,178 @@
         if(a < 5){
              document.write('A est inférieur à 5 <br>');
         }
+
         else if(a == 5){
             document.write('A est égal à 5 <br>');
         }
+
         else if(a > 5){
             document.write('A est supérieur à 5 <br>');
         }
-        else{
+
+        else {
             document.write('A n\'est pas un nombre <br>');
         }
 
+        // isNaN (is Not a Number)
+
+        var chiffre4 = 50, chiffre5 = '100', chiffre6 = 'vingt';
+
+        if(!isNaN(chiffre5)) {
+            document.write('Ceci est bien un nombre <br>');
+        }
+
+        else {
+            document.write('Ceci n\'est pas un nombre <br>');
+        }
+
+        var total = chiffre4 + chiffre5;
+        console.log(total);
+
+        // Le parseInt() est une méthode pour transformer un string en number
+
+        console.log(typeof(chiffre5)); //il affiche string dans la console
+
+        var parse = parseInt(chiffre5);
+        console.log(typeof (parse)); //il affiche string dans la console
+
+        console.log(chiffre4 + parse);
+
+        var chiffre7 = parseInt(chiffre5);
+        console.log(typeof (chiffre7)); 
+        document.write('<p>' + (chiffre4 + chiffre7) + '</p>' );
+        // console.log(parseInt(chiffre5));
+
+        var chiffre8 = 182.66;
+        console.log(parseInt(chiffre8)); 
+        // equivalent au parseInt pour les décimaux : parseFloat()
+        console.log(parseFloat(chiffre8)); 
+
+        //  il existe une méthode pour passe un number en string : toString()
+        var chiffre9 = chiffre4.toString();
+        console.log(typeof(chiffre9));
+
+        // CONDITION SWITCH
+
+        var couleur= "jaune";
+        // var couleur = "vert";
+
+        switch(couleur){
+            case 'bleu' : 
+                document.write('Vous aimez le bleu <br>');
+            break;
+            case 'rouge':
+                document.write('Vous aimez le rouge <br>');
+            break;
+            case 'vert':
+                document.write('Vous aimez le vert <br>');
+            break;
+            case 'rose':
+                document.write('Vous aimez le rose <br>');
+            break;
+            default :
+                document.write('Vous aimez ni le rouge ni le bleu ni le vert ni le rose <br>');
+            break;
+        }
+
+        if(couleur == 'bleu'){
+            document.write('Vous aimez le bleu en i <br>');
+        }
+        else if (couleur == 'rose') {
+            document.write('Vous aimez le rose en if <br>');
+        }
+        else if (couleur == 'vert') {
+            document.write('Vous aimez le vert en if <br>');
+        }
+        else {
+            document.write('Vous n\'aimez pas le vert ni le jaune ni le rose en if <br>');
+        }
+        
+        
         /*
         -----------------------------------------------
         -------------------9 OPERATEURS ---------------
         -----------------------------------------------
         */
         document.write('<h2> 9 - OPERATEURS</h2>');
+
+        /* 
+        Exemple : var var1 = 3, var2 = 4;
+
+        Egal (==) va renvoyer TRUE si les opérandes sont égales en valeur
+            3 == var1
+            '3' == var1
+            3 == '3'
+
+        Egal (===) va renvoyer TRUE si les opérandes sont égales en VALEUR et en TYPE
+            3 === var1
+
+        Different de (!=) renvoyer TRUE si les opérandes NE SONT PAS EGALES
+            4 != var1
+            var2 != var1
+
+        Different de (!==) renvoyer TRUE si les opérandes ne sont pas du même type ET / OU pas égales
+
+        Supérieur à (>) renvoyer TRUE si l'opérande de gauche est plus grande que l'opérande de droite
+
+        Inférieur à (<) renvoyer TRUE si l'opérande de gauche est plus petite que l'opérande de droite
+
+        Supérieur ou égal (>=) renvoyer TRUE si l'opérande de gauche est plus grande ou égale à celle de de droite
+
+        Inférieur ou égal (<=) renvoyer TRUE si l'opérande de gauche est plus petite ou égale à celle de de droite
+
+        CONCLUSION : une condition renvoie toujours TRUE ou FALSE et les instructions de la condition ne seront executées QUE si la valeur de retour est TRUE
+
+        isNaN (is Not a Number) Va renvoyer True si l'élément testé est bien différent d'un nombre (on utilisera !isNaN pour vérifier que l'élément soit bien un nombre)
+
+        Javascript compte 3 opérateurs logiques
+
+            - AND   -->  &&
+            - OR    -->  ||
+            - NOT   -->  !
+
+            L'opérateur AND 
+            Il s'écrit &&. Il evalue le résultat en TRUE si les deux expressions sont TRUE.
+            Si l'une des expressions est traitée en FALSE, alors le résultat sera false.
+                true && true => TRUE
+                true && false => FALSE
+                false && true => FALSE
+                false && false => FALSE
+
+            L'opérateur OR
+            Il s'écrit ||. Il evalue le résultat en TRUE si les deux expressions sont TRUE.
+            Si l'une des expressions est traitée en false, alors le résultat sera false.
+                true || true => TRUE
+                false || true => TRUE
+                true || false => TRUE
+                false || false => FALSE
+
+            L'opérateur NOT (L'inverse de)
+            Il s'écrit ||. Il transforme ce qui est TRUE en FALSE, e ce qui est FALSE en TRUE.
+            
+                !true => FALSE
+                !false => TRUE
+
+             /*
+            -----------------------------------------------
+            -------------------10 BOUCLES ---------------
+            -----------------------------------------------
+            */
+            document.write('<h2> 10 - BOUCLES </h2>');
+
+            // var i = 0;
+            // while(i <= 5){
+            //     document.write((i+1) + '--- <br>');
+            //     i++; // i = i+1  // i++ permet d'incrémnter ma variable
+            // }
+
+            var i = 1;
+                while (i <= 6) {
+                    document.write(i + '--- <br>');
+                    i++; // i = i+1  // i++ permet d'incrémnter ma variable
+                }
+
+            // */
 
         </script>
     </body>
