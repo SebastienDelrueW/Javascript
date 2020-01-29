@@ -62,12 +62,12 @@
 
         // boites de dialogue
         // boite alerte
-        //alert('Ceci est un message alerte');
+        // alert('Ceci est un message alerte');
         // confirm
-        //confirm('Confimez-vous ?');
+        // confirm('Confimez-vous ?');
         // prompt permet de récupérer une donnée utilisateur
         // prompt('voici le prompt');
-        //prompt('Quel est votre age ?');
+        // prompt('Quel est votre age ?');
 
         /*
         -----------------------------------------------------
@@ -149,7 +149,7 @@
         document.write(monTexte2);
         var monTexte3 = '55';
 
-        //   type Number
+        // type Number
         var chiffre = 5.5; // affectation se fait sans quote
         console.log(chiffre); 
         var négatif = -10; // tous les types d'écritures numériques sont possibles
@@ -186,24 +186,23 @@
         // const BOUGE_PAS = 'nouveau contenu' ; induira des messages d'erreur que d'essayer de redefinir une constante
 
         /*
-            -----------------------------------------------------
-            -------------------6 CONCATENATION ---------------
-            -----------------------------------------------------
-            */
-            document.write('<h2> 6 - CONCATENATION</h2>');
+        -----------------------------------------------------
+        -------------------6 CONCATENATION ---------------
+        -----------------------------------------------------
+        */
+        document.write('<h2> 6 - CONCATENATION</h2>');
 
+        // nous concatenons les string avec le symbole +
 
-            // nous concatenons les string avec le symbole +
+        var prenom = 'Bruce', nom='Wayne';
+        // ecrire dansle document "Bruce Wayne"
+        document.write(prenom +' '+ nom + '<br>'); //création d'un espace entre Bruce et Wayne
+        document.write('<strong>' + prenom + '</strong> ' +  nom  +'<br>');
 
-            var prenom = 'Bruce', nom='Wayne';
-            // ecrire dansle document "Bruce Wayne"
-            document.write(prenom +' '+ nom + '<br>'); //création d'un espace entre Bruce et Wayne
-            document.write('<strong>' + prenom + '</strong> ' +  nom  +'<br>');
+        // realiser un prompt demandans son age à l'utilisateur, récupérer cette donnée et l'utiliser pour afficher : vous avez XX ans !
 
-            // realiser un prompt demandans son age à l'utilisateur, récupérer cette donnée et l'utiliser pour afficher : vous avez XX ans !
-
-            var definitionAge = prompt('Quel est votre age ?');
-            document.write('vous avez ' + definitionAge + ' ans.');
+        var definitionAge = prompt('Quel est votre age ?');
+        document.write('vous avez ' + definitionAge + ' ans.');
 
         </script>
 </body>
