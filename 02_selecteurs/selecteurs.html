@@ -7,39 +7,101 @@
     <title>Selecteurs Javascript</title>
 
     <style>
-    
+    .test{color: red; font-weight: bold;}
     
     </style>
+    <script>
+        window.onload = function (){
+
+            // SELECTION NATURELLE D'UN ID
+
+            var monId = titre;
+            console.log(monId);
+
+            // SECTION BY ID
+            var monId2 = document.getElementById('titre');
+            console.log(monId2);
+
+            // SELECTION BY CLASSNAME
+            var mesClasses = document.getElementsByClassName('avion');
+            // je récupère un ensemble : une collection html
+            console.log(mesClasses);
+            // je peux atteindre un des éléments de la collection grace à l'indice [1]
+            console.log(mesClasses[1]);
+            // innerHTML définit le contenu de la balise
+            console.log(mesClasses[1].innerHTML);
+            mesClasses[1].innerHTML = 'Nouveau contenu';
+
+            // SELECTION BY TAGNAME
+
+            var mesP = document.getElementsByTagName('p');
+            console.log(mesP);
+            console.log(mesP[1].innerHTML);
+
+
+            for(var i=0; i < mesP.length; i++){
+                console.log(mesP[i].innerHTML + '<br>');
+                mesP[i].style.marginTop = '100px';
+                mesP[i].style.color = 'red',  mesP[i].style.backgroundColor = 'lightgrey ', mesP[i].style.opacity = "0.7";
+                mesP[i].style.fontSize = '35px',  mesP[i].style.fontFamily = 'New Roman',  mesP[i].style.borderRadius = '50%';
+            }
+              
+            // liste des mots clés à appliquer avec .style 
+            // https://www.w3schools.com/jsref/dom_obj_style.asp
+
+
+            // querySeLctor 
+
+            var query = document.querySelector('#titre'); // une selection spécifique
+            console.log(query);
+
+            var query2 = document.querySelectorAll('div.avion'); // une sélection de plusieurs éléments 
+            console.log(query2[2]);
+
+
+
+            // selectionnez le airbus 3 : modifie son contenu "mon airbus"
+            // de plus styliser cet airbus 3 pour y appliquer un fond bleu, un texte blanc et gras
+
+            var query3 = document.querySelectorAll('div.avion');
+            console.log(query3[2].innerHTML);
+            query3[2].innerHTML = 'Mon airbus';
+            query3[2].style.backgroundColor = 'blue', query3[2].style.color = '#fff', query3[2].style.fontWeight = 'bold';
+            query3[2].style.padding = "25px";
+        
+
+            // var query3
+            // query3[1].style.backgroundColor = 'red',
+            
+
+            // var monId = titre;
+            // console.log(monId.innerHTML);
+            // monId.innerHTML = 'TITRE DE REMPLACEMENT';
+
+            // deuxième version 
+            // var mavar3 = document.getElementById('titre');
+            // console.log(mavar3);
+            // mavar3.innerHTML = 'TITRE DE REMPLACEMENT 2';
+
+        } // fin de mon window.onload ne pas effacer
+    </script>
 </head>
 <body>
-    <h2 id="titre">Mon titre de niveau 2</h2>
+        <h2 id="titre">Mon titre de niveau 2</h2>
 
-    <div class="avion">AirBus 1</div>
-    <div class="avion">AirBus 2</div>
-    <div class="avion">AirBus 3</div>
+        <div class="avion">AirBus 1</div>
+        <div class="avion">AirBus 2</div>
+        <div class="avion">AirBus 3</div>
 
-    <p id="first">Paragraphe 1</p>
-    <p>Paragraphe 2</p>
-    <p title="Infobulle">Paragraphe 3</p>
-    <p>Paragraphe 4</p>
-    <p>Paragraphe 5</p>
+        <p id="first">Paragraphe 1</p>
+        <p>Paragraphe 2</p>
+        <p title="Infobulle">Paragraphe 3</p>
+        <p>Paragraphe 4</p>
+        <p class="avion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod recusandae placeat rem quisquam iste earum quibusdam nostrum sit error nesciunt modi reiciendis eligendi est, voluptatibus maiores id nam debitis ducimus. Paragraphe 5</p>
+        <h2>Mon titre de fin</h2>
 
 
-    <script>
-    // SELECTION NATURELLE D'UN ID
 
-    var monId = titre;
-    console.log(monId);
-
-    // SECTION BY ID
-    var monId2 = document.getElementById('titre');
-    console.log(monId2);
-    
-    // SELECTION BY CLASSNAME
-    var mesClasses = document.getElementsByClassName('avion');
-    console.log(mesClasses);
-    console.log(mesClasses[1]);
-
-    </script>
+   
 </body>
 </html>
