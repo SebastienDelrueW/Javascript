@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selecteurs Javascript</title>
+
+    <style>
+    
+    
+    </style>
+</head>
+<body>
+    <h2 id="titre">Mon titre de niveau 2</h2>
+
+    <div class="avion">AirBus 1</div>
+    <div class="avion">AirBus 2</div>
+    <div class="avion">AirBus 3</div>
+
+    <p id="first">Paragraphe 1</p>
+    <p>Paragraphe 2</p>
+    <p title="Infobulle">Paragraphe 3</p>
+    <p>Paragraphe 4</p>
+    <p>Paragraphe 5</p>
+
+
+    <script>
+    // SELECTION NATURELLE D'UN ID
+
+    var monId = titre;
+    console.log(monId);
+
+    // SECTION BY ID
+    var monId2 = document.getElementById('titre');
+    console.log(monId2);
+    
+    // SELECTION BY CLASSNAME
+    var mesClasses = document.getElementsByClassName('avion');
+    console.log(mesClasses);
+    console.log(mesClasses[1]);
+
+    </script>
+</body>
+</html>
