@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cumuler des prix TTC</title>
+</head>
+<body>
+<script>
+
+// Déclaration des variables
+// ------------------------
+
+var nombre_article; // Nombre d'articles à traiter = valeur max du compteur de boucle
+var ind; // Compteur de boucle
+var prix;
+var quantite;
+var total;
+
+// Initialisation de l'accumulateur à 0
+total=0;
+
+// Saisie du nombre d'articles à traiter
+nombre_article=prompt("Nombre d'articles","");
+
+for (ind=1;ind <=nombre_article;ind++){
+
+     // Saisies
+     prix=parseFloat(prompt("Donnez le prix hors taxe de l'article :",""));
+     quantite=parseFloat(prompt("Donnez la quantité :",""));
+     tva=parseFloat(prompt("Encoder le taux de TVA (ex. : 0,21) :","")); 
+
+     // Cumuler
+     total=total+prix*quantite*(1+tva);
+
+}
+
+// Affichage des résultats
+// ----------------------
+
+alert ("Le prix TTC est de : "+total);
+
+</script> 
+</body>
+</html>

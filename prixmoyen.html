@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boucle while avec une valeur bidon (= valeur d'arrêt)</title>
+</head>
+<body>
+<script>
+
+// Déclarer les variables = informer l'interpréteur Javascript
+// -----------------------------------------------------
+var prix;         // prix encodé par l'utilisateur
+var moyenne;  // reçoit la valeur de la moyenne
+var somme;     // contient le cumul de tous les prix
+var cpt;         // compteur de prix
+
+// Initialiser les variables
+// ---------------------
+cpt=0;
+somme=0;
+
+// Calculer la moyenne d'un nombre quelconque de valeurs
+// -----------------------------------------------------
+
+// parseInt : fonction qui convertit son argument en un nombre entier
+
+// Il est conseillé de fixer la base numérique	:
+// parseInt("08") renvoie 0 ! mais parseInt("08",10) renvoie 8  
+// parseInt("0xC",16) renvoie 12
+
+// (l'argument est tronqué : 3.14 devient 3 ; 3.789 devient 3)
+
+// parseFloat : fonction qui convertit son argument en un nombre décimal
+
+prix = parseFloat(prompt("Prix n° "+(cpt+1)+ " (tapez -1 pour terminer)",""));
+while  (prix >-1){ 
+     somme = somme + prix;
+     cpt++;
+     prix = parseFloat(prompt("Prix n° "+(cpt+1)+ " (tapez -1 pour terminer)",""));
+} 
+
+if (cpt!=0) {
+     moyenne = somme/cpt;
+     // Afficher le résultat
+     // ------------------
+     alert ("Moyenne des "+cpt+" prix : "+moyenne);
+}
+</script>
+</body>
+</html>
