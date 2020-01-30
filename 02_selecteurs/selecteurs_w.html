@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selecteurs Javascript</title>
+
+    <style>
+    .test{color: red; font-weight: bold;}
+    
+    </style>
+    
+</head>
+<body>
+
+        <h1> Le titre principal</h1>
+        <h2 id="titre">Mon titre de niveau 2</h2>
+
+        <div class="avion">AirBus 1</div>
+        <div class="avion">AirBus 2</div>
+        <div class="avion">AirBus 3</div>
+
+        <p id="first">Paragraphe 1</p>
+        <p>Paragraphe 2</p>
+        <p title="Infobulle">Paragraphe 3</p>
+        <p>Paragraphe 4</p>
+        <p class="avion"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quod recusandae placeat rem quisquam iste earum quibusdam nostrum sit
+            error nesciunt modi reiciendis eligendi est, voluptatibus maiores id nam debitis ducimus.</span> Paragraphe 5</p>
+        <h2>Mon titre de fin</h2>
+
+<script>
+        // window.onload = function (){
+
+            // SELECTION NATURELLE D'UN ID
+
+            var monId = titre;
+            console.log(monId);
+
+            // SECTION BY ID
+            var monId2 = document.getElementById('titre');
+            console.log(monId2);
+
+            // SELECTION BY CLASSNAME
+            var mesClasses = document.getElementsByClassName('avion');
+            // je récupère un ensemble : une collection html
+            console.log(mesClasses);
+            // je peux atteindre un des éléments de la collection grace à l'indice [1]
+            console.log(mesClasses[1]);
+            // innerHTML définit le contenu de la balise
+            console.log(mesClasses[1].innerHTML);
+            mesClasses[1].innerHTML = 'Nouveau contenu';
+
+            // SELECTION BY TAGNAME
+
+            var mesP = document.getElementsByTagName('p');
+            console.log(mesP);
+            console.log(mesP[1].innerHTML);
+
+
+            for(var i=0; i < mesP.length; i++){
+                console.log(mesP[i].innerHTML + '<br>');
+                mesP[i].style.marginTop = '100px';
+                mesP[i].style.color = 'red',  mesP[i].style.backgroundColor = 'lightgrey ', mesP[i].style.opacity = "0.7";
+                mesP[i].style.fontSize = '35px',  mesP[i].style.fontFamily = 'New Roman',  mesP[i].style.borderRadius = '50%';
+            }
+              
+            // liste des mots clés à appliquer avec .style 
+            // https://www.w3schools.com/jsref/dom_obj_style.asp
+
+
+            // querySeLctor 
+
+            var query = document.querySelector('#titre'); // une selection spécifique
+            console.log(query);
+
+            var query2 = document.querySelectorAll('div.avion'); // une sélection de plusieurs éléments 
+            console.log(query2[2]);
+
+
+            // selectionnez le airbus 3 : modifie son contenu "mon airbus"
+            // de plus styliser cet airbus 3 pour y appliquer un fond bleu, un texte blanc et gras
+
+            var query3 = document.querySelectorAll('div.avion');
+            console.log(query3[2].innerHTML);
+            query3[2].innerHTML = 'Mon airbus';
+            query3[2].style.backgroundColor = 'blue', query3[2].style.color = '#fff', query3[2].style.fontWeight = 'bold';
+            query3[2].style.padding = "25px";
+        
+
+
+            var query4 = document.querySelector('h2');
+            console.log(query4.innerHTML);
+            query4.innerHTML = 'Mon h2 est grisonnant';
+            query4.style.backgroundColor = 'blue', query4.style.backgroundColor = 'lightgrey';
+            
+            var query5 = document.querySelectorAll('p');
+            console.log(query5[0].innerHTML);
+            query5[0].innerHTML = 'mon super Paragraphe aime le bleu';
+            query5[0].style.backgroundColor = 'blue';
+
+            var query6 = document.querySelectorAll('p');
+            console.log(query6[1].innerHTML);
+            query6[1].innerHTML = 'mon super Paragraphe n\'aime pas le bleu';
+            query6[1].style.backgroundColor = 'grey';
+
+            var query7 = document.querySelectorAll('p');
+            console.log(query7[2].innerHTML);
+            query7[2].innerHTML = 'super Paragraphe';
+            query7[2].style.backgroundColor = 'yellow', query7[2].style.color = 'black';
+
+            var query8 = document.querySelector('h1');
+            console.log(query8.innerHTML);
+            query8.innerHTML = 'THE TITRE';
+            query8.style.backgroundColor = 'green', query8.style.color = 'white';
+
+            var query9 = document.querySelectorAll('p');
+            console.log(query9[3].innerHTML);
+            query9[3].innerHTML = 'Changement de titre';
+            query9[3].style.backgroundColor = 'black', query9[3].style.color = 'white';
+
+            var query10 = document.querySelector('span');
+            console.log(query10.innerHTML);
+            query10.innerHTML = 'YOUPI C\'est CHOUETTE';
+            query10.style.backgroundColor = 'pink', query10.style.color = 'black';
+
+            var query11 = document.querySelector('#text');
+            // console.log(query10.innerHTML);
+            // query10.innerHTML = 'YOUPI C\'est CHOUETTE';
+            query11.style.fontsize = '12px';
+
+
+            // var query3
+            // query3[1].style.backgroundColor = 'red',
+            
+
+            // var monId = titre;
+            // console.log(monId.innerHTML);
+            // monId.innerHTML = 'TITRE DE REMPLACEMENT';
+
+            // deuxième version 
+            // var mavar3 = document.getElementById('titre');
+            // console.log(mavar3);
+            // mavar3.innerHTML = 'TITRE DE REMPLACEMENT 2';
+
+        // } // fin de mon window.onload ne pas effacer
+    </script>
+</body>
+</html>

@@ -539,7 +539,7 @@
             phrase = 'Bonjour Pierre comment vas tu ?';
             console.log(phrase);
             var mot = 'Pierre';
-            console.log(phrase.substr(0,7)); // la console écrit Bonjour, 0 c'est la première et 7 le nombre de lettre à extraire
+            console.log(phrase.substr(0,7)); // la console écrit Bonjour, 0 c'est la première et 7 le nombre de lettres à extraire
             // console.log(phrase.substr(8,mot.length));
             console.log(phrase.substr(phrase.indexOf('Pierre'),mot.length)); 
 
@@ -595,7 +595,7 @@
                 return document.write('Nous sommes en ' + saison + ', il fait ' + temperature + ' degré(s) <br>');
             }
              function meteo2(saison, temperature) {
-                    return document.write('Nous sommes au ' + saison + ', il fait ' + temperature + ' degré(s)<br>');
+                    return document.write('Nous sommes au ' + saison + ', il fait ' + temperature + ' degré(s) <br>');
                 }
 
             meteo('été', 25); 
@@ -611,10 +611,10 @@
                 else{
                     e = 'en '
                 }
-                return document.write('Nous sommes  ' + e + saison + ', il fait ' + temperature + ' degré(s) <br>');
+                return document.write('Nous sommes  ' + e + saison + ', il fait ' + temperature +  ' degré(s) <br>');
             }
             
-            meteo3('printemps', 20);
+            meteo3('automne', 12);
             
             // */
 
