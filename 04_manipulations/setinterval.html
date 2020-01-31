@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Setinterval</title>
         <style>
-            #monImage{border: 1px solid grey; max-width: 300px;}
+            #monImage{border: 1px solid rgb(55, 52, 52);box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2); max-width: 300px;}
         </style>
     </head>
     <body>
@@ -20,8 +22,7 @@
                 }
             }
             // setinterval permet de lancer une fonction tous les X millième de seconde
-            var timer = window.setInterval('f()', 1000);
-
+            var timer = window.setInterval('f()', 3000);
         </script>
     </body>
 </html>
