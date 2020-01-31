@@ -595,39 +595,39 @@
                 return document.write('Nous sommes en ' + saison + ', il fait ' + temperature + ' degré(s) <br>');
             }
              function meteo2(saison, temperature) {
-                    return document.write('Nous sommes au ' + saison + ', il fait ' + temperature + ' degré(s) <br>');
+                    return document.write('Nous sommes au ' + saison + ', il fait ' + temperature + ' degrés <br>');
                 }
 
             meteo('été', 25); 
             meteo2('printemps', 15); 
-
-                
-            function meteo3(saison, temperature){
-                var e;
-
-                if(saison == 'printemps'){
-                    e = 'au '
-                }
-                else{
-                    e = 'en '
-                }
-                return document.write('Nous sommes  ' + e + saison + ', il fait ' + temperature +  ' degré(s) <br>');
-            }
-            
             meteo3('automne', 12);
+                
+            // function meteo3(saison, temperature){
+            //     var e;
+
+            //     if(saison == 'printemps'){
+            //         e = 'au '
+            //     }
+            //     else{
+            //         e = 'en '
+            //     }
+            //     return document.write('Nous sommes  ' + e + saison + ', il fait ' + temperature +  ' degré(s) <br>');
+            // }
+            
+            
 
 
             
              function meteo3(saison, temperature) {
-                    var z;
+                    var x = ' degrés';
 
                     if (saison == 'automne') {
-                        z = 'automne'
+                        z = 'degré(s)'
                     }
                     else {
-                        x = 'degrés '
+                        x = ' degrés'
                     }
-                    return document.write('Nous sommes  ' + z + saison + ', il fait ' + temperature x  +   'degrés <br>');
+                    return document.write('Nous sommes en ' + saison + ', il fait ' + temperature +  x  + ' <br>');
                 }
             
 
