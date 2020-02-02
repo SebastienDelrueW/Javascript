@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>heure</title>
+        <style>
+        #txt{
+            margin: 0 auto;
+            border: 2px solid grey;
+            width: 60px;
+            padding-left: 2px;
+            padding-top: 1px;
+            box-shadow:4px 6px 2px 1px rgba(87, 84, 76, 0.2);
+            color: rgb(43, 6, 70);
+        }
+        </style>
+    </head>
+    <body onload="startTime()">
+            <div id="txt"></div>
+            <script>
+                function startTime() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+                    // add a zero in front of numbers<10
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+                    var t = setTimeout(function () { startTime() }, 500);
+                }
+
+                function checkTime(i) {
+                    if (i < 10) {
+                        i = "0" + i;
+                    }
+                    return i;
+                }
+            </script>
+
+    </body>
+
+</html>

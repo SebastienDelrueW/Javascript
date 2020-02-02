@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Test interval</title>
+
+        <style>
+            img {
+                width: 400px;
+                border: 1px solid rgb(55, 52, 52);
+                box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2);
+            }
+        </style>
+    </head>
+    <body onload="ChangeImage()">
+     <img id="serie" src="imgs/a.jpg">
+        <script>
+            var numImage = 0;
+            var tabImages = new Array(9);
+            console.log(numImage)
+          
+            tabImages[0] = "imgs/a.jpg";
+            setTimeout("ChangeImage()",17000);
+            clearTimeout(numImage) 
+            tabImages[1] = "imgs/b.jpg";
+            setTimeout("ChangeImage()", 2000);
+            clearTimeout(numImage) 
+            tabImages[2] = "imgs/image.jpg";
+            setTimeout("ChangeImage()", 5500);
+            clearTimeout(numImage) 
+            tabImages[3] = "imgs/6.jpg";
+            setTimeout("ChangeImage()", 3000);
+            clearTimeout(numImage) 
+            tabImages[4] = "imgs/c.jpg";
+            setTimeout("ChangeImage()", 12000);
+            clearTimeout(numImage) 
+            tabImages[5] = "imgs/d.jpg";
+            setTimeout("ChangeImage()", 5000);
+            clearTimeout(numImage) 
+            tabImages[6] = "imgs/e.jpg";
+            setTimeout("ChangeImage()", 2000);
+            clearTimeout(numImage) 
+            tabImages[7] = "imgs/1.jpg";
+            setTimeout("ChangeImage()", 11000);
+            clearTimeout(numImage) 
+            tabImages[8] = "imgs/3.jpg";
+            setTimeout("ChangeImage()", 8000);
+            clearTimeout(numImage) 
+            tabImages[9] = "imgs/4.jpg";
+            setTimeout("ChangeImage()", 6000);
+            clearTimeout(numImage) 
+            tabImages[10] = "imgs/5.jpg";
+            setTimeout("ChangeImage()", 14000);
+            clearTimeout(numImage) 
+           
+
+            function ChangeImage() {
+                document.getElementById("serie").src = tabImages[numImage];
+                if (numImage == 10) numImage = 1;
+                else numImage++;
+
+                setTimeout("ChangeImage()", 7000);
+                clearTimeout(numImage) 
+            }
+
+        </script> 
+</body>
+
+</html>
+
