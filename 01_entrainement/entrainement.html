@@ -107,6 +107,7 @@
         var fruits ='Pomme';
         console.log(fruits);
 
+
         // contrairement au = d"affectation qui remplace la valeur de la variable, j'utilise ici +=
         // qi va ajouter à la valeur de la variable
         fruits += 'Fraise '; // prend en compte l'espace
@@ -248,7 +249,9 @@
         chiffre3 += 5;// fonctionne avec tous les opérateurs -=, *=, /=, %=
         document.write(chiffre3 + '<br>'); 
 
-        // recuperer dans un prompt la valeur souhaitée par l'utilisateur.
+      
+
+        // récupérer dans un prompt la valeur souhaitée par l'utilisateur.
         // envoyer une alerte indiquant le resultat au carré et au cube
 
         // var ageDelapersonne =  prompt('quel est ton age ?');
@@ -510,7 +513,11 @@
                   }
             
                 //  A VOIR
-        
+
+                
+
+                   
+                    
             /*
             -----------------------------------------------------------
             -------------------11 FONCTIONS PREDEFINIES ---------------
@@ -522,6 +529,8 @@
             Ce sont des morceaux de code encapsulés qu'on appelle au besoin pour executer une action précise.
             On distingue les fonctions prédéfinies et les fonctions utilisateurs.
             */var phrase = 'je Eddy Salut, je m\'appelle Eddy.';
+
+           
 
             // cette variable contient du texte, c'est en réalité un objet string qui possède plusieurs méthodes et 1 propriété.
 
@@ -601,6 +610,7 @@
             meteo('été', 25); 
             meteo2('printemps', 15); 
             meteo3('automne', 12);
+            meteo4('hiver',5);
                 
             // function meteo3(saison, temperature){
             //     var e;
@@ -614,10 +624,6 @@
             //     return document.write('Nous sommes  ' + e + saison + ', il fait ' + temperature +  ' degré(s) <br>');
             // }
             
-            
-
-
-            
              function meteo3(saison, temperature) {
                     var x = ' degrés';
 
@@ -627,10 +633,11 @@
                     else {
                         x = ' degrés'
                     }
-                    return document.write('Nous sommes en ' + saison + ', il fait ' + temperature +  x  + ' <br>');
-                }
-            
 
+                    return document.write('Nous sommes en ' + saison + ', il fait ' + temperature +  x  + ' <br>');
+
+
+                }
             // */
 
         </script>
