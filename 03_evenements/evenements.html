@@ -1,154 +1,253 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Evenements Javascript</title>
-        <style>
-            #div1{background: rgb(189, 71, 189); color: white; padding: 10px; width: 85%;}
-            #div2{background: rgb(26, 179, 171); color: white; padding: 10px; width: 60%;}
-            #div3{background: rgb(2, 51, 184); color: white; padding: 10px; width: 40%;}
-            #div4{background: rgb(184, 99, 2); color: white; border-radius: 55%; padding: 50px;width: 20%;}
-            #prenom{width: 50px;}
-            .clicBouton { background: rgb(4, 98, 153); color: white; width: 70px;}
 
-            #parag{background: rgb(163, 159, 154); color: white; border: 2px solid black; padding: 50px;width: 20%;}
-            #div10{background: rgb(68, 38, 2); color: rgb(54, 27, 27); border: 2px solid black; padding: 50px;width: 50%;}
-
-            #triangle-code{
-            display : inline-block;
-            height : 0;
-            width : 0;
-            border-right : 87px solid rgb(116, 13, 13);
-            border-bottom : 150px solid rgb(43, 177, 230);
-            border-left : 87px solid rgb(128, 128, 229);
-            color: rgb(53, 45, 45);
-            }
-
-            #cercle{
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evenements Javascript</title>
+    <style>
+        #div1 {
+            background: rgb(189, 71, 189);
+            color: white;
+            padding: 10px;
+            width: 85%;
+        }
+        
+        #div2 {
+            background: rgb(26, 179, 171);
+            color: white;
+            padding: 10px;
+            width: 60%;
+        }
+        
+        #div3 {
+            background: rgb(2, 51, 184);
+            color: white;
+            padding: 10px;
+            width: 40%;
+        }
+        
+        #div4 {
+            background: rgb(184, 99, 2);
+            color: white;
+            border-radius: 55%;
+            padding: 50px;
+            width: 20%;
+        }
+        
+        #div5 {
             width: 40px;
             height: 40px;
             border-radius: 20px;
             background: rgb(0, 51, 128);
-            } 
-            
-        </style>
-    </head>
-    <body>
-        <h2 onclick="fDiv1();">Click</h2>
-        <div id="div1">DIV1</div>
-        <p id='parag'>Paragraphe à cliquer</p>
-        <h2>DblClick</h2>
-        <div id="div2">DIV2</div>
-        <h2>Survol (mouseover)</h2>
-        <div id="div3">DIV3</div>
-        <h2>Survol (mouseout)</h2>
-        <div id="div4">DIV4</div>
-        <h2>FOCUS</h2>
+            border: 3px solid rgb(0, 51, 128);
+        }
+        
+        #div5 {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: rgb(0, 128, 119);
+            border: 3px solid rgb(0, 51, 128);
+        }
+        
+        #div6 {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: rgb(233, 0, 0);
+            border: 3px solid rgb(0, 51, 128);
+        }
+        
+        #prenom {
+            width: 50px;
+        }
+        
+        .clicBouton {
+            background: rgb(4, 98, 153);
+            color: white;
+            width: 70px;
+        }
+        
+        #parag {
+            background: rgb(163, 159, 154);
+            color: white;
+            border: 2px solid black;
+            padding: 50px;
+            width: 20%;
+        }
+        
+        #div10 {
+            background: rgb(68, 38, 2);
+            color: rgb(54, 27, 27);
+            border: 2px solid black;
+            padding: 50px;
+            width: 50%;
+        }
+        
+        #triangle-code {
+            display: inline-block;
+            height: 0;
+            width: 0;
+            border-right: 87px solid rgb(116, 13, 13);
+            border-bottom: 150px solid rgb(43, 177, 230);
+            border-left: 87px solid rgb(128, 128, 229);
+            color: rgb(53, 45, 45);
+        }
+        
+        #cercle {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: rgb(0, 51, 128);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 onclick="fDiv1();">Click</h2>
+    <div id="div1">DIV1</div>
+    <p id='parag'>Paragraphe à cliquer</p>
+    <h2>DblClick</h2>
+    <div id="div2">DIV2</div>
+    <h2>Survol (mouseover)</h2>
+    <div id="div3">DIV3</div>
+    <h2>Survol (mouseout)</h2>
+    <div id="div4">DIV4</div>
+    <h2>FOCUS</h2>
 
 
-        <!-- <form method=GET> méthode non sécurisée via url
+    <!-- <form method=GET> méthode non sécurisée via url
         <form method=POST> méthode non visible peut être récupéré via le serveur -->
 
-        <form>
-            <label for="prenom"> Veuillez saisir votre prénom</label>
-            <input id="prenom" type="text" name="prenom">
-            <input type="submit" name="submit" id="submit" value="OK">
-        </form>
+    <form>
+        <label for="prenom"> Veuillez saisir votre prénom</label>
+        <input id="prenom" type="text" name="prenom">
+        <input type="submit" name="submit" id="submit" value="OK">
+    </form>
 
-        <h2>TRIANGLE</h2>
-        <div id='triangle-code'>TRIANGLE</div>
-        <h2>CERCLE</h2>
-        <div id='cercle'>Cercle</div>
-        <h2>METAM</h2>
-        <div id='cercle'>DIV10</div>
-        <script>
+    <h2>TRIANGLE</h2>
+    <div id='triangle-code'>TRIANGLE</div>
+    <h2>CERCLE</h2>
+    <div id='div5'>Cercle</div>
+    <h2>METAM</h2>
+    <div id='div6'>DIV10</div>
+    <script>
+        // le addEventListener a besoin de deux arguments : 1 - le mot clé correspondant à l'évènement (ici le click) 2 - la FONCTION executée lors de l'évènement (ici la fonction fDiv)
+        // document.querySelector('#div1').addEventListener('click', function (){alert('par fonction anonyme');});
+        document.querySelector('#div1').addEventListener('click', fDiv1);
 
-            // le addEventListener a besoin de deux arguments : 1 - le mot clé correspondant à l'évènement (ici le click) 2 - la FONCTION executée lors de l'évènement (ici la fonction fDiv)
-            // document.querySelector('#div1').addEventListener('click', function (){alert('par fonction anonyme');});
-            document.querySelector('#div1').addEventListener('click',fDiv1);
-            function fDiv1(){
-                alert('Div1 est cliquée !'); 
-            }
+        function fDiv1() {
+            alert('Div1 est cliquée !');
+        }
 
-            // sur ce paragraphe, plutôt qu'appeler une fonction existante nous executons une fonction anonyme au moment du clic
-            document.querySelector('#parag').addEventListener('click', function () { alert('par fonction anonyme'); });
-            // var maDiv2 =  document.getElementById('div2');
-            // maDiv2.addEventListener('dblclick', fDiv2);
-
-           
-            document.getElementById('div2').addEventListener('dblclick',fDiv2);
-            function fDiv2() {
-                alert('Div2 est double cliquée !');
-            }
-
-            document.querySelector('#div3').addEventListener('mouseover', fDiv3);
-            function fDiv3() {
-                alert('Div survolée !');
-            }
-
-            // je vous laisse réaliser une div4 avec une alert nous prevenant lorsqu'elle cesse d'être survolée
-
-            // document.querySelector('#div4').addEventListener('mouseout', fDiv4);
-            document.querySelector('#div4').addEventListener('click', fDiv4);
-            function fDiv4() {
-                // alert('Div n\'est plus survolée !');
-                this.style.borderRadius = '0';
-            }
+        // sur ce paragraphe, plutôt qu'appeler une fonction existante nous executons une fonction anonyme au moment du clic
+        document.querySelector('#parag').addEventListener('click', function() {
+            alert('par fonction anonyme');
+        });
+        // var maDiv2 =  document.getElementById('div2');
+        // maDiv2.addEventListener('dblclick', fDiv2);
 
 
-            // function fDiv4() {
-            //         document.querySelector('#div3').innerHTML = "Div3 n\'est plus survolée !"
-            // }
-            // function fDiv4() {
-            //     // this correspond et sert de raccourci pour ne pas recopier document.querySelector('#') etc... this est un mot clé signifiant lui même.
-            //         this.innerHTML = "Div4 n\'est plus survolée !"
-            // }
+        document.getElementById('div2').addEventListener('dblclick', fDiv2);
+
+        function fDiv2() {
+            alert('Div2 est double cliquée !');
+        }
+
+        document.querySelector('#div3').addEventListener('mouseover', fDiv3);
+
+        function fDiv3() {
+            alert('Div survolée !');
+        }
+
+        // je vous laisse réaliser une div4 avec une alert nous prevenant lorsqu'elle cesse d'être survolée
+
+        // document.querySelector('#div4').addEventListener('mouseout', fDiv4);
+        document.querySelector('#div4').addEventListener('click', fDiv4);
+
+        function fDiv4() {
+            // alert('Div n\'est plus survolée !');
+            this.style.borderRadius = '0';
+        }
 
 
-            document.querySelector('#prenom').addEventListener('focus' ,inputFocus);
-            function inputFocus(){
-                    // alert('Champ focus');
-                    this.style.width ='250px';
-            }
+        // function fDiv4() {
+        //         document.querySelector('#div3').innerHTML = "Div3 n\'est plus survolée !"
+        // }
+        // function fDiv4() {
+        //     // this correspond et sert de raccourci pour ne pas recopier document.querySelector('#') etc... this est un mot clé signifiant lui même.
+        //         this.innerHTML = "Div4 n\'est plus survolée !"
+        // }
 
-            document.querySelector('#prenom').addEventListener('blur', inputBlur);
-            function inputBlur() {
-                    // alert('Champ blur');
-                    this.style.width = '50px';
-            }
 
-            document.querySelector('#submit').addEventListener('click', inputSubmit);
-            function inputSubmit(event){
-                    event.preventDefault();
-                    // alert('formulaire validé');
-                    // this.style.background = 'red';
-                    this.classList.add('clicBouton');
-                    console.log(document.querySelector('#prenom').value);
-            }
+        document.querySelector('#prenom').addEventListener('focus', inputFocus);
 
-          var i = 7;
+        function inputFocus() {
+            // alert('Champ focus');
+            this.style.width = '250px';
+        }
 
-            function change() {
-                var i = 5;
-                console.log(i)
-            }
+        document.querySelector('#prenom').addEventListener('blur', inputBlur);
 
+        function inputBlur() {
+            // alert('Champ blur');
+            this.style.width = '50px';
+        }
+
+        document.querySelector('#submit').addEventListener('click', inputSubmit);
+
+        function inputSubmit(event) {
+            event.preventDefault();
+            // alert('formulaire validé');
+            // this.style.background = 'red';
+            this.classList.add('clicBouton');
+            console.log(document.querySelector('#prenom').value);
+        }
+
+        var i = 7;
+
+        function change() {
+            var i = 5;
             console.log(i)
-            change();
+        }
 
-            //  document.querySelector('#div10').addEventListener('click', fDiv10);
-            //  function fDiv10() {
-            //          // alert('Div n\'est plus survolée !');
-            //          this.replace('div4');
-                // Pour masquer la division :
-                // document.getElementById('#div4').style.display = none;
-                // ///Pour afficher la division :
-                // document.getElementById('#div4').style.display = block;
-                   
-            //  }
+        console.log(i)
+        change();
 
-        </script>
-    </body>
+        //  document.querySelector('#div10').addEventListener('click', fDiv10);
+        //  function fDiv10() {
+        //          // alert('Div n\'est plus survolée !');
+        //          this.replace('div4');
+        // Pour masquer la division :
+        // document.getElementById('#div4').style.display = none;
+        // ///Pour afficher la division :
+        // document.getElementById('#div4').style.display = block;
+
+        //  }
+
+        document.querySelector('#div5').addEventListener('mouseover', fDiv5);
+
+        function fDiv5() {
+            // alert('Div n\'est plus survolée !');
+            this.style.height = '150px';
+            this.style.width = '250px';
+            this.style.background = '0';
+
+        }
+
+        document.querySelector('#div6').addEventListener('mouseover', fDiv6);
+
+
+        function fDiv6() {
+            // alert('Div n\'est plus survolée !');
+            this.style.width = '250px';
+            this.style.color = 'rgb(53, 45, 45)';
+            this.style.backgroundColor = "yellow";
+
+        }
+    </script>
+</body>
+
 </html>

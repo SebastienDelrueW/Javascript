@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>ENTRAINEMENT JS</title>
-        <style>
-    
-        </style>
-        
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ENTRAINEMENT JS</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
 
     <!-- CONTENU HTML -->
-       
-       <script>
+
+    <script>
         // commentaires pour la ligne
 
         /* 
             commentaire pour un bloc de texte
         */
-        
+
         /* ENTRAINEMENT:
                     -- 1 --         COMMENTAIRES, SYNTAXE
                     -- 2 --         AFFICHAGE
@@ -55,7 +57,7 @@
         // // document.write('mon premier message');
         // document.write('<h1>Entrainement <em> Javascript</em></h1>');
         document.write('<h2> 2 - AFFICHAGE</h2>');
-       
+
         console.info('Informations à envoyer dans la console');
         console.log('La même chose que info (petite icone en moins)');
 
@@ -91,20 +93,22 @@
         var sonAge;
         sonAge = prompt('Quel est votre age ?');
         var sonAge = prompt('Quel est votre age ?');
-        
+
         // possibilité de déclarer un ensemnble de variables
-        var prenom = 'Sylvie', nom = 'Dupont', genre ='Feminin';
+        var prenom = 'Sylvie',
+            nom = 'Dupont',
+            genre = 'Feminin';
 
         prenom = 'Martine';
         console.log('Prénom : ' + prenom);
         prenom = 'Robert';
 
-        console.log('Prénom : '+prenom);
+        console.log('Prénom : ' + prenom);
         // console.log(prenom);
         console.log(nom);
-        document.write('<br>'+prenom+'<br>');
+        document.write('<br>' + prenom + '<br>');
 
-        var fruits ='Pomme';
+        var fruits = 'Pomme';
         console.log(fruits);
 
 
@@ -127,11 +131,11 @@
 
         // je peux déclarer une variable avec le mot clef 'let' variable let 
         let maNouvelleVariable;
-        console.log(maNouvelleVariable); 
+        console.log(maNouvelleVariable);
 
         // je peux déclarer de manière globale (sans mot clef ni var, ni let) mais je dois lui conférer une valeur: variable globale
-        maTroisiemeVariable ='test';
-        console.log(maTroisiemeVariable); 
+        maTroisiemeVariable = 'test';
+        console.log(maTroisiemeVariable);
 
         /*
         -----------------------------------------------------
@@ -143,32 +147,32 @@
         // les trois rincipaux types de donnéees (appelés primitifs) sont les string (chaine de caractères) / number (données numériques) / booléan (données booléennes vrai ou faux)
 
         // les string:
-        var monTexte="Voici une phrase écrite dans un double quote";
+        var monTexte = "Voici une phrase écrite dans un double quote";
         // l'antislash permet d'échapper un caractère dans la string
-        var monTexte2='Voici une phrase écrite dans un simple quote aujourd\'hui <br>';
-        console.log(monTexte2); 
+        var monTexte2 = 'Voici une phrase écrite dans un simple quote aujourd\'hui <br>';
+        console.log(monTexte2);
         document.write(monTexte2);
         var monTexte3 = '55';
 
         // type Number
         var chiffre = 5.5; // affectation se fait sans quote
-        console.log(chiffre); 
+        console.log(chiffre);
         var négatif = -10; // tous les types d'écritures numériques sont possibles
         var decimal = 5.5;
 
         // type booléen : il ne prend que deux valeurs TRUE ou FALSE
         var choix = true;
-        console.log(choix); 
+        console.log(choix);
 
         // typeof permet de verifier le type d'une variable
-        document.write(typeof(monTexte)+'<br>');
-        document.write(typeof(chiffre)+'<br>');
-        document.write(typeof(choix)+'<br>');
+        document.write(typeof(monTexte) + '<br>');
+        document.write(typeof(chiffre) + '<br>');
+        document.write(typeof(choix) + '<br>');
 
         var monChiffre = '50';
         var monChiffre2 = '20';
-        console.log(monChiffre+monChiffre2); 
-        console.log(typeof(monChiffre)); 
+        console.log(monChiffre + monChiffre2);
+        console.log(typeof(monChiffre));
 
         var ageUtilisateur = prompt('Quel est votre age ?');
         console.log(typeof(ageUtilisateur));
@@ -183,7 +187,7 @@
         // les constantes ne sont jamais destinées à varier, elles sont déclarées par le mot clé const et par convention nous les nommerons tout en majuscule, afin de les différencier des variables 
 
         const BOUGE_PAS = 'ma constante impossible à modifier';
-        document.write(BOUGE_PAS+'<br>');
+        document.write(BOUGE_PAS + '<br>');
         // const BOUGE_PAS = 'nouveau contenu' ; induira des messages d'erreur que d'essayer de redefinir une constante
 
         /*
@@ -195,10 +199,11 @@
 
         // nous concatenons les string avec le symbole +
 
-        var prenom = 'Bruce', nom='Wayne';
+        var prenom = 'Bruce',
+            nom = 'Wayne';
         // ecrire dansle document "Bruce Wayne"
-        document.write(prenom +' '+ nom + '<br>'); //création d'un espace entre Bruce et Wayne
-        document.write('<strong>' + prenom + '</strong> ' +  nom  +'<br>');
+        document.write(prenom + ' ' + nom + '<br>'); //création d'un espace entre Bruce et Wayne
+        document.write('<strong>' + prenom + '</strong> ' + nom + '<br>');
 
         // realiser un prompt demandans son age à l'utilisateur, récupérer cette donnée et l'utiliser pour afficher : vous avez XX ans !
 
@@ -215,27 +220,28 @@
 
         // additions
         var addition = 10 + 5;
-        document.write(addition +'<br>');// resultat 15
+        document.write(addition + '<br>'); // resultat 15
 
         // soustraction
         var soustraction = 16 - 4;
-         document.write(soustraction + '<br>');// resultat 12
+        document.write(soustraction + '<br>'); // resultat 12
 
         //  multiplication
         var multiplication = 5 * 4;
-        document.write(multiplication + '<br>');// resultat 20
+        document.write(multiplication + '<br>'); // resultat 20
 
         // division
         var division = 20 / 4;
-        document.write(division + '<br>');// resultat 5
+        document.write(division + '<br>'); // resultat 5
 
         // modulo 'j'ai dix billes pour trois personnes , il me reste une, le modulo exprime ce qui reste de l'opération)
         var modulo = 20 % 3;
         document.write(modulo + '<br>'); // resultat 1
 
-        var chiffre1 = 10, chiffre2 = 5;
+        var chiffre1 = 10,
+            chiffre2 = 5;
         var resultat = chiffre1 + chiffre2; // tester avec + - * / %
-         document.write(resultat + '<br>'); // resultat 15
+        document.write(resultat + '<br>'); // resultat 15
         var resultat = chiffre1 - chiffre2; // tester avec + - * / %
         var resultat = chiffre1 * chiffre2; // tester avec + - * / %
         var resultat = chiffre1 / chiffre2; // tester avec + - * / %
@@ -243,13 +249,13 @@
         document.write(resultat + '<br>'); // resultat 15
 
         var chiffre3 = 20;
-        chiffre3 = chiffre3 + 10 ;
+        chiffre3 = chiffre3 + 10;
         document.write(chiffre3 + '<br>');
 
-        chiffre3 += 5;// fonctionne avec tous les opérateurs -=, *=, /=, %=
-        document.write(chiffre3 + '<br>'); 
+        chiffre3 += 5; // fonctionne avec tous les opérateurs -=, *=, /=, %=
+        document.write(chiffre3 + '<br>');
 
-      
+
 
         // récupérer dans un prompt la valeur souhaitée par l'utilisateur.
         // envoyer une alerte indiquant le resultat au carré et au cube
@@ -273,78 +279,64 @@
         */
         document.write('<h2> 8 -  CONDITIONS</h2>');
 
-        var a = 10, b = 5, c = 2; 
+        var a = 10,
+            b = 5,
+            c = 2;
 
-       
-        if(a > b){
+
+        if (a > b) {
             document.write('A est supérieur à B <br>'); //le <br> c'est pour le retour à la ligne          
-        }
-
-        else {
+        } else {
             document.write('A n\'est supérieur à B <br>'); //le <br> c'est pour le retour à la ligne
         }
 
-        if(a == b){
+        if (a == b) {
             document.write('A est égal à B <br>'); //le <br> c'est pour le retour à la ligne
-        }
-
-        else {
+        } else {
             document.write('A est différent de B <br>'); //le <br> c'est pour le retour à la ligne
         }
 
-        if(a === b) {
+        if (a === b) {
             document.write('A est égal à B <br>'); //le <br> c'est pour le retour à la ligne
-        }
-
-        else {
+        } else {
             document.write('A est différent de B <br>'); //le <br> c'est pour le retour à la ligne
         }
 
         // if et AND
-        if(a > b && b > c){
+        if (a > b && b > c) {
             document.write('ok pour les deux conditions <br>');
-        }
-
-        else {
+        } else {
             document.write('une condition au moins, n\'est pas remplie  <br>');
         }
 
         // if et OR
         if (a > b || b > c) {
-             document.write('ok au moins une des conditions est valable <br>');
-        }
-
-        else {
-             document.write('aucune des conditions n\'est remplie <br>');
+            document.write('ok au moins une des conditions est valable <br>');
+        } else {
+            document.write('aucune des conditions n\'est remplie <br>');
         }
 
         // if multiples (else if)
 
-        if(a < 5){
-             document.write('A est inférieur à 5 <br>');
-        }
-
-        else if(a == 5){
+        if (a < 5) {
+            document.write('A est inférieur à 5 <br>');
+        } else if (a == 5) {
             document.write('A est égal à 5 <br>');
-        }
-
-        else if(a > 5){
+        } else if (a > 5) {
             document.write('A est supérieur à 5 <br>');
-        }
-
-        else {
+        } else {
             document.write('A n\'est pas un nombre <br>');
         }
 
         // isNaN (is Not a Number)
 
-        var chiffre4 = 50, chiffre5 = '100', chiffre6 = 'vingt';
+        var chiffre4 = 50,
+            chiffre5 = '100',
+            chiffre6 = 'vingt';
 
-        if(!isNaN(chiffre5)) {
+        if (!isNaN(chiffre5)) {
             document.write('Ceci est bien un nombre <br>');
-        }
-
-        else {
+        } else {
             document.write('Ceci n\'est pas un nombre <br>');
         }
 
@@ -356,19 +348,19 @@
         console.log(typeof(chiffre5)); //il affiche string dans la console
 
         var parse = parseInt(chiffre5);
-        console.log(typeof (parse)); //il affiche string dans la console
+        console.log(typeof(parse)); //il affiche string dans la console
 
         console.log(chiffre4 + parse);
 
         var chiffre7 = parseInt(chiffre5);
-        console.log(typeof (chiffre7)); 
-        document.write('<p>' + (chiffre4 + chiffre7) + '</p>' );
+        console.log(typeof(chiffre7));
+        document.write('<p>' + (chiffre4 + chiffre7) + '</p>');
         // console.log(parseInt(chiffre5));
 
         var chiffre8 = 182.66;
-        console.log(parseInt(chiffre8)); 
+        console.log(parseInt(chiffre8));
         // equivalent au parseInt pour les décimaux : parseFloat()
-        console.log(parseFloat(chiffre8)); 
+        console.log(parseFloat(chiffre8));
 
         //  il existe une méthode pour passe un number en string : toString()
         var chiffre9 = chiffre4.toString();
@@ -376,41 +368,38 @@
 
         // CONDITION SWITCH
 
-        var couleur= "jaune";
+        var couleur = "jaune";
         // var couleur = "vert";
 
-        switch(couleur){
-            case 'bleu' : 
+        switch (couleur) {
+            case 'bleu':
                 document.write('Vous aimez le bleu <br>');
-            break;
+                break;
             case 'rouge':
                 document.write('Vous aimez le rouge <br>');
-            break;
+                break;
             case 'vert':
                 document.write('Vous aimez le vert <br>');
-            break;
+                break;
             case 'rose':
                 document.write('Vous aimez le rose <br>');
-            break;
-            default :
+                break;
+            default:
                 document.write('Vous aimez ni le rouge ni le bleu ni le vert ni le rose <br>');
-            break;
+                break;
         }
 
-        if(couleur == 'bleu'){
+        if (couleur == 'bleu') {
             document.write('Vous aimez le bleu en if <br>');
-        }
-        else if(couleur == 'rose') {
+        } else if (couleur == 'rose') {
             document.write('Vous aimez le rose en if <br>');
-        }
-        else if(couleur == 'vert') {
+        } else if (couleur == 'vert') {
             document.write('Vous aimez le vert en if <br>');
-        }
-        else {
+        } else {
             document.write('Vous n\'aimez pas le vert ni le jaune ni le rose en if <br>');
         }
-        
-        
+
+
         /*
         -----------------------------------------------
         -------------------9 OPERATEURS ---------------
@@ -480,163 +469,162 @@
             -------------------10 BOUCLES -------------------
             -------------------------------------------------
             */
-            document.write('<h2> 10 - BOUCLES </h2>');
+        document.write('<h2> 10 - BOUCLES </h2>');
 
-            //  var i = 0;
-            //  while(i <= 6){
-            //      document.write((i+1) + '--- <br>');
-            //      i++; // i = i+1  // i++ permet d'incrémnter ma variable
-            //  }
+        //  var i = 0;
+        //  while(i <= 6){
+        //      document.write((i+1) + '--- <br>');
+        //      i++; // i = i+1  // i++ permet d'incrémenter ma variable
+        //  }
 
-            // var i = 0;
-            //     while (i <= 6){
-            //         if(i === 6){
-            //             document.write(i + '<br>');
-            //         }
-            //         else{
-            //             document.write(i + '--- ');
-            //         }
-            //         i++; // i = i+1  // i++ permet d'incrémnter ma variable
-            //     }
+        // var i = 0;
+        //     while (i <= 6){
+        //         if(i === 6){
+        //             document.write(i + '<br>');
+        //         }
+        //         else{
+        //             document.write(i + '--- ');
+        //         }
+        //         i++; // i = i+1  // i++ permet d'incrémenter ma variable
+        //     }
 
-                // for(var p=0; p <= 5; p++ ){
-                //     document.write(p + '--- ');
-                // }
+        // for(var p=0; p <= 5; p++ ){
+        //     document.write(p + '--- ');
+        // }
 
-                 for (var p=0; p <= 6; p++){
-                    if (p === 6){
-                          document.write(p + '<br>');
-                    }
-                      else {
-                          document.write(p + '--- <br> ');
-                    }
-                  }
-            
-                //  A VOIR
+        for (var p = 0; p <= 6; p++) {
+            if (p === 6) {
+                document.write(p + '<br>');
+            } else {
+                document.write(p + '--- <br> ');
+            }
+        }
 
-                    
-            /*
-            -----------------------------------------------------------
-            -------------------11 FONCTIONS PREDEFINIES ---------------
-            -----------------------------------------------------------
-            */
-            document.write('<h2> 11 - FONCTIONS PREDEFINIES </h2>');
+        //  A VOIR
 
-            /* comme tous les langages de programmation JS possèdent des fonctions.
-            Ce sont des morceaux de code encapsulés qu'on appelle au besoin pour executer une action précise.
-            On distingue les fonctions prédéfinies et les fonctions utilisateurs.
-            */var phrase = 'je Eddy Salut, je m\'appelle Eddy.';
 
-           
+        /*
+        -----------------------------------------------------------
+        -------------------11 FONCTIONS PREDEFINIES ---------------
+        -----------------------------------------------------------
+        */
+        document.write('<h2> 11 - FONCTIONS PREDEFINIES </h2>');
 
-            // cette variable contient du texte, c'est en réalité un objet string qui possède plusieurs méthodes et 1 propriété.
+        /* comme tous les langages de programmation JS possèdent des fonctions.
+        Ce sont des morceaux de code encapsulés qu'on appelle au besoin pour executer une action précise.
+        On distingue les fonctions prédéfinies et les fonctions utilisateurs.
+        */
+        var phrase = 'je Eddy Salut, je m\'appelle Eddy.';
 
-            // Length (propriété)
-            console.log(phrase.length);
 
-            // indexOf retournr la position de la première lettre de "Eddy" dans la phrase
-            console.log(phrase.indexOf('je'));
 
-            console.log(phrase.lastIndexOf('je')); // elle situe je dans la console 15
-            console.log(phrase.lastIndexOf('Eddy')); // elle situe je dans la console 28
+        // cette variable contient du texte, c'est en réalité un objet string qui possède plusieurs méthodes et 1 propriété.
 
-            // substr permet de récupérer le morceau d'une chaine de caractère, il prend deux arguments : 1er ou commence la découpe, second : combien de caractères
+        // Length (propriété)
+        console.log(phrase.length);
 
-            phrase = 'Bonjour Pierre comment vas tu ?';
-            console.log(phrase);
-            var mot = 'Pierre';
-            console.log(phrase.substr(0,7)); // la console écrit Bonjour, 0 c'est la première et 7 le nombre de lettres à extraire
-            // console.log(phrase.substr(8,mot.length));
-            console.log(phrase.substr(phrase.indexOf('Pierre'),mot.length)); 
+        // indexOf retournr la position de la première lettre de "Eddy" dans la phrase
+        console.log(phrase.indexOf('je'));
 
-            console.log(phrase.replace('Pierre', 'Jean'));
-            
-            // Voir pour afficher sur la page
+        console.log(phrase.lastIndexOf('je')); // elle situe je dans la console 15
+        console.log(phrase.lastIndexOf('Eddy')); // elle situe je dans la console 28
 
-            // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/prototype
+        // substr permet de récupérer le morceau d'une chaine de caractère, il prend deux arguments : 1er ou commence la découpe, second : combien de caractères
 
-            // toLowCase / toUpperCase
+        phrase = 'Bonjour Pierre comment vas tu ?';
+        console.log(phrase);
+        var mot = 'Pierre';
+        console.log(phrase.substr(0, 7)); // la console écrit Bonjour, 0 c'est la première et 7 le nombre de lettres à extraire
+        // console.log(phrase.substr(8,mot.length));
+        console.log(phrase.substr(phrase.indexOf('Pierre'), mot.length));
 
-            phrase = 'tout est en minuscule';
-            document.write(phrase.toUpperCase());
-            //    phrase.toUpperCase();
+        console.log(phrase.replace('Pierre', 'Jean'));
 
-            phrase = phrase.toUpperCase();
+        // Voir pour afficher sur la page
 
-            console.log(phrase.toLowerCase());
+        // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/prototype
 
-            /*
-            ------------------------------------------------------------
-            -------------------12 FONCTIONS UTILISATEURS ---------------
-            ------------------------------------------------------------
-            */
-            document.write('<h2> 12 - FONCTIONS UTILISATEURS</h2>');
+        // toLowCase / toUpperCase
 
-            // Déclaration de fonction par FUNTION STATEMENT 
+        phrase = 'tout est en minuscule';
+        document.write(phrase.toUpperCase());
+        //    phrase.toUpperCase();
 
-            function maFonction(){
-                return document.write('<p>Nous avons une journée ensoleillée ! </p> <br>');
+        phrase = phrase.toUpperCase();
+
+        console.log(phrase.toLowerCase());
+
+        /*
+        ------------------------------------------------------------
+        -------------------12 FONCTIONS UTILISATEURS ---------------
+        ------------------------------------------------------------
+        */
+        document.write('<h2> 12 - FONCTIONS UTILISATEURS</h2>');
+
+        // Déclaration de fonction par FUNTION STATEMENT 
+
+        function maFonction() {
+            return document.write('<p>Nous avons une journée ensoleillée ! </p> <br>');
+        }
+
+        function maFonction2() {
+            return document.write('<p>Nous avons une journée pluvieuse ! </p> <br>');
+        }
+
+        maFonction();
+        maFonction2();
+
+        // fonction avec argument : l'argument (dans la parenthèse) est facultatif, il permet d'indiquer que l'appel à la fonction nécesssite également une information de l'utilisateur. l'argument est définit par un mot clé, et les instructions de la fonction sont censées reprendre ce mot clé pour signifier ce que l'on fait de cette information.
+        function direBonjour(prenom) {
+            var message = document.write('<p>Bonjour ' + prenom + ', comment vas tu ? <p/> <br>');
+            return message
+        }
+
+        var pren = 'Jacques'
+
+        direBonjour('John');
+        direBonjour('Gisèle');
+        direBonjour(pren);
+
+        function meteo(saison, temperature) {
+            return document.write('Nous sommes en ' + saison + ', il fait ' + temperature + ' degré(s) <br>');
+        }
+
+        function meteo2(saison, temperature) {
+            return document.write('Nous sommes au ' + saison + ', il fait ' + temperature + ' degrés <br>');
+        }
+
+        meteo('été', 25);
+        meteo2('printemps', 15);
+        meteo3('automne', 12);
+        meteo4('hiver', 5);
+
+        // function meteo3(saison, temperature){
+        //     var e;
+
+        //     if(saison == 'printemps'){
+        //         e = 'au '
+        //     }
+        //     else{
+        //         e = 'en '
+        //     }
+        //     return document.write('Nous sommes  ' + e + saison + ', il fait ' + temperature +  ' degré(s) <br>');
+        // }
+
+        function meteo3(saison, temperature) {
+            var x = ' degrés';
+
+            if (saison == 'automne') {
+                z = 'degré(s)'
+            } else {
+                x = ' degrés'
             }
 
-            function maFonction2() {
-                    return document.write('<p>Nous avons une journée pluvieuse ! </p> <br>');
-                }
-
-            maFonction();
-            maFonction2();
-
-            // fonction avec argument : l'argument (dans la parenthèse) est facultatif, il permet d'indiquer que l'appel à la fonction nécesssite également une information de l'utilisateur. l'argument est définit par un mot clé, et les instructions de la fonction sont censées reprendre ce mot clé pour signifier ce que l'on fait de cette information.
-            function direBonjour(prenom){
-                var message = document.write('<p>Bonjour ' + prenom +', comment vas tu ? <p/> <br>');
-                return message
-            }
-
-            var pren = 'Jacques'
-
-            direBonjour('John');
-            direBonjour('Gisèle');
-            direBonjour(pren);
-            
-            function meteo(saison, temperature){
-                return document.write('Nous sommes en ' + saison + ', il fait ' + temperature + ' degré(s) <br>');
-            }
-             function meteo2(saison, temperature) {
-                    return document.write('Nous sommes au ' + saison + ', il fait ' + temperature + ' degrés <br>');
-                }
-
-            meteo('été', 25); 
-            meteo2('printemps', 15); 
-            meteo3('automne', 12);
-            meteo4('hiver',5);
-                
-            // function meteo3(saison, temperature){
-            //     var e;
-
-            //     if(saison == 'printemps'){
-            //         e = 'au '
-            //     }
-            //     else{
-            //         e = 'en '
-            //     }
-            //     return document.write('Nous sommes  ' + e + saison + ', il fait ' + temperature +  ' degré(s) <br>');
-            // }
-            
-             function meteo3(saison, temperature) {
-                    var x = ' degrés';
-
-                    if (saison == 'automne') {
-                        z = 'degré(s)'
-                    }
-                    else {
-                        x = ' degrés'
-                    }
-
-                    return document.write('Nous sommes en ' + saison + ', il fait ' + temperature +  x  + ' <br>');
+            return document.write('Nous sommes en ' + saison + ', il fait ' + temperature + x + ' <br>');
 
 
-                }
-            
+        }
+    </script>
+</body>
 
-        </script>
-    </body>
 </html>
